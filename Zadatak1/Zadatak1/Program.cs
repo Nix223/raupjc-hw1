@@ -42,7 +42,8 @@ namespace Zadatak1
                 }
                 for (int i = index; i < _internalStorage.Length - 1; i++)
                 {
-                    _internalStorage[i] = _internalStorage[i+1];
+                    _internalStorage[i] = _internalStorage[i + 1];
+                    pozicija--;
                 }
                 return true;
             }
