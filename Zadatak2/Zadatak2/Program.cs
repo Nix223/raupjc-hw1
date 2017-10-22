@@ -26,7 +26,7 @@ namespace Zadatak2
             }
 
 
-            public void Add<X>(X item)
+            public void Add(X item)
             {
                 if (pozicija >= _internalStorage.Length)
                 {
@@ -50,19 +50,16 @@ namespace Zadatak2
                 return true;
             }
 
-            public bool Remove<X>(X item)
+            public bool Remove(X item)
             {
-                for (int i = 0; i < _internalStorage.Length; i++)
+                if (IndexOf(item) != -1)
                 {
-                    if (_internalStorage[i].Equals(item))
-                    {
-                        RemoveAt(i);
-                    }
+                    RemoveAt(IndexOf(item));
                 }
                 return false;
             }
 
-            public X GetElement<X>(int index)
+            public X GetElement(int index)
             {
                 if (index <= pozicija)
                 {
@@ -74,7 +71,7 @@ namespace Zadatak2
                 }
             }
 
-            public int IndexOf<X>(X item)
+            public int IndexOf(X item)
             {
                 for (int i = 0; i < _internalStorage.Length; i++)
                 {
@@ -96,7 +93,7 @@ namespace Zadatak2
                 pozicija = 0;
             }
 
-            public bool Contains<X>(X item)
+            public bool Contains(X item)
             {
                 for (int i = 0; i < _internalStorage.Length; i++)
                 {
