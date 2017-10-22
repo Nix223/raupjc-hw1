@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zadatak1
 {
-    interface IIntegerList
+    public interface IIntegerList
     {
         void Add(int item);
         bool Remove(int item);
