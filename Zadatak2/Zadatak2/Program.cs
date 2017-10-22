@@ -97,6 +97,7 @@ namespace Zadatak2
             {
                 for (int i = 0; i < _internalStorage.Length; i++)
                 {
+
                     if (_internalStorage[i].Equals(item))
                     {
                         return true;
